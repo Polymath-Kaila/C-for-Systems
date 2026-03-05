@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build: hello",
+      "type": "shell",
+      "command": "mingw32-make",
+      "args": ["-f", "build\\Makefile", "hello"],
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "run: hello",
+      "type": "shell",
+      "command": "mingw32-make",
+      "args": ["-f", "build\\Makefile", "run-hello"],
+      "group": "test",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
